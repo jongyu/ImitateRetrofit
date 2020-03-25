@@ -23,4 +23,12 @@ interface GitHubApi {
 
     }
 
+    @Api("repos")
+    interface Repos {
+
+        @Get("{owner}/{repo}/forks")
+        fun forks(owner: String, repo: String)
+
+    }
+
 }
